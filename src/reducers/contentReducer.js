@@ -2,14 +2,14 @@ export default function contentReducer(state = `# Header
 
 ### Subheader
 
-1. Ordered 1
-2. Ordered 2
-3. Ordered 3
+1. ordered 1
+2. ordered 2
+3. ordered 3
 
 
-- Unordered 1
-- Unordered 2
-- Unordered 3
+- unordered 1
+- unordered 2
+- unordered 3
 
 *italics*
 
@@ -20,6 +20,9 @@ _alt-italics_
 **_itali-bold_**
 
 ~~strikethrough~~
+
+> Block
+quote
 
 \`code\`
 
