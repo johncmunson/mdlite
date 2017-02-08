@@ -8,3 +8,4 @@
 - support multiple documents
   - use `shortid` for unique id's
 - implement routing with `react-router-dom@next`
+- create a branch that demonstrates `ducks-modular-redux` architecture
