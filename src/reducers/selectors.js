@@ -1,7 +1,3 @@
-// export function getContent(state) {
-//     return state.content
-// }
-
 export function getTabs(state) {
     return state.documents.map(d => (
         {

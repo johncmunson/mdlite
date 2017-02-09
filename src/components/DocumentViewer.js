@@ -16,7 +16,9 @@ function dangerouslySetInnerHTML(content) {
 }
 
 const DocumentViewer = (props) => (
-    <div dangerouslySetInnerHTML={dangerouslySetInnerHTML(props.activeDocument.content)}></div>
+    <div
+        dangerouslySetInnerHTML={dangerouslySetInnerHTML(props.activeDocument.content)}>
+    </div>
 );
 
 export default DocumentViewer

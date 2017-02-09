@@ -3,7 +3,8 @@ import React from 'react'
 const documentEditorStyles = {
     height: '100%',
     minWidth: '100%',
-    maxWidth: '100%'
+    maxWidth: '100%',
+    fontSize: '1em'
 }
 
 const DocumentEditor = (props) => {
