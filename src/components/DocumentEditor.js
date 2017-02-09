@@ -11,9 +11,9 @@ const DocumentEditor = (props) => {
     return (
         <textarea
             ref={node => input = node}
-            onChange={() => props.handleChange(input.value)}
+            onChange={() => props.handleContentChange(input.value, props.activeDocument.id)}
             type="text"
-            value={props.content}
+            value={props.activeDocument.content}
             style={documentEditorStyles}
         >
         </textarea>

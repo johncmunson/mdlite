@@ -1,6 +1,10 @@
 import React from 'react'
 import marked from 'marked'
 
+const documentViewerStyles = {
+    overFlow: 'scroll'
+}
+
 function dangerouslySetInnerHTML(content) {
     const processedContent = marked(content, {
         renderer: new marked.Renderer(),
@@ -16,7 +20,7 @@ function dangerouslySetInnerHTML(content) {
 }
 
 const DocumentViewer = (props) => (
-    <div dangerouslySetInnerHTML={dangerouslySetInnerHTML(props.content)}></div>
+    <div style={documentViewerStyles} dangerouslySetInnerHTML={dangerouslySetInnerHTML(props.activeDocument.content)}></div>
 );
 
 export default DocumentViewer

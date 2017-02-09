@@ -1,14 +1,14 @@
 import React from 'react'
 import DocumentViewer from './DocumentViewer.js'
 import DocumentEditor from './DocumentEditor.js'
-import Tabs from './Tabs.js'
+import DocumentTabs from './DocumentTabs.js'
 import { Page, Row, Column } from 'hedron'
 
-const DocumentEditorViewer = (props) => (
+const DocumentManager = (props) => (
     <Page>
         <Row debug>
             <Column sm={12} md={12} lg={12}>
-                <Tabs {...props} />
+                <DocumentTabs {...props} />
             </Column>
         </Row>
         <Row debug>
@@ -22,4 +22,4 @@ const DocumentEditorViewer = (props) => (
     </Page>
 );
 
-export default DocumentEditorViewer
+export default DocumentManager

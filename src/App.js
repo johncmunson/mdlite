@@ -1,8 +1,8 @@
 import React from 'react'
-import ConnectedDocumentEditorViewer from './containers/ConnectedDocumentEditorViewer.js'
+import ConnectedDocumentManager from './containers/ConnectedDocumentManager.js'
 
 const App = () => (
-    <ConnectedDocumentEditorViewer />
+    <ConnectedDocumentManager />
 );
 
 export default App

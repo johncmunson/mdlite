@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import contentReducer from './contentReducer.js'
+import documentsReducer from './documentsReducer.js'
+import activeDocumentIdReducer from './activeDocumentIdReducer.js'
 
 const rootReducer = combineReducers({
-    content: contentReducer
+    documents: documentsReducer,
+    activeDocumentId: activeDocumentIdReducer
 });
 
 export default rootReducer
