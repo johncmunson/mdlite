@@ -6,23 +6,30 @@ import shortid from 'shortid'
 class DocumentTabs extends React.Component {
     render() {
         let input;
+        let id = this.props.activeDocument.id === this.props.tabs[0].id ?
+            this.props.tabs[1].id
+            :
+            this.props.tabs[0].id;
         return (
             <div>
                 <span onClick={() => this.props.handleAddDocumentClick(shortid.generate())}>+</span>
                 <Tabs
-                    selectedIndex={this.props.tabs.findIndex(t => t.active === true)}
+                    selectedIndex={this.props.tabs.findIndex(t => t.active === true) || 0}
                 >
                     <TabList>
                         {this.props.tabs.map(
                             (t) => (
                                 <Tab
                                     key={t.id}
-                                    onClick={() => this.props.handleTabClick(t.id)}
                                 >
-                                    {t.title}
+                                    <span
+                                        onClick={() => this.props.handleTabClick(t.id)}
+                                    >
+                                        {t.title}
+                                    </span>
                                     <span
                                         style={{marginLeft: '8px', color: 'red', fontSize: '.8em'}}
-                                        onClick={() => this.props.handleDeleteDocumentClick(this.props.activeDocument.id)}
+                                        onClick={() => this.props.handleDeleteDocumentClick(this.props.activeDocument.id, id)}
                                     >
                                         {t.active ? 'x' : null}
                                     </span>

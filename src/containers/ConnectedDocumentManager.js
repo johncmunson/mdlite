@@ -10,7 +10,7 @@ import { getActiveDocument, getTabs } from '../reducers/selectors.js'
 const mapStateToDocumentManagerProps = (state) => (
     {
         activeDocument: getActiveDocument(state),
-        tabs: getTabs(state)
+        tabs: getTabs(state),
     }
 );
 
@@ -26,9 +26,9 @@ const mapDispatchToDocumentManagerProps = (dispatch) => (
             dispatch(addDocument(id))
             dispatch(updateActiveDocumentId(id))
         },
-        handleDeleteDocumentClick: (id) => {
-            dispatch(deleteDocument(id))
-            // dispatch(findANewActiveDocument)
+        handleDeleteDocumentClick: (deletedId, firstId) => {
+            dispatch(deleteDocument(deletedId))
+            dispatch(updateActiveDocumentId(firstId))
         },
         handleTitleChange: (title, id) => {
             dispatch(updateTitle(title, id))
