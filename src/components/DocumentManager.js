@@ -5,13 +5,13 @@ import DocumentTabs from './DocumentTabs.js'
 import { Page, Row, Column } from 'hedron'
 
 const DocumentManager = (props) => (
-    <Page>
-        <Row debug>
+    <Page debug>
+        <Row>
             <Column sm={12} md={12} lg={12}>
                 <DocumentTabs {...props} />
             </Column>
         </Row>
-        <Row debug>
+        <Row>
             <Column sm={6} md={6} lg={6}>
                 <DocumentEditor {...props} />
             </Column>
