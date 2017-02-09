@@ -1,6 +1,9 @@
 import React from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import shortid from 'shortid'
+// The use of hedron grid system was an attempt to get the 'add-document' button to display inline
+// next to the tabs component. However, hedron automatically stacks columns at mobile viewport
+// widths. This isn't desireable, but there may be a way to disable this feature.
 // import { BreakpointProvider, Row, Column } from 'hedron'
 
 class DocumentTabs extends React.Component {
@@ -58,33 +61,5 @@ class DocumentTabs extends React.Component {
         )
     }
 }
-
-// class DocumentTabs extends React.Component {
-//     render() {
-//         return (
-//             <BreakpointProvider breakpoints={{ sm: 50, md: 51 }}>
-//                 <Row debug>
-//                     <Column sm={1} md={1} lg={1}>
-//                         <span>+</span>
-//                     </Column>
-//                     <Column sm={11} md={11} lg={11}>
-//                         <Tabs
-//                             selectedIndex={this.props.tabs.findIndex(t => t.active === true)}
-//                         >
-//                             <TabList>
-//                                 {this.props.tabs.map(
-//                                     (t) => <Tab key={t.id} onClick={() => this.props.handleTabClick(t.id)}>{t.title}</Tab>
-//                                 )}
-//                             </TabList>
-//                             {this.props.tabs.map(
-//                                 (t) => <TabPanel key={t.id}><p>{t.title}</p></TabPanel>
-//                             )}
-//                         </Tabs>
-//                     </Column>
-//                 </Row>
-//             </BreakpointProvider>
-//         )
-//     }
-// }
 
 export default DocumentTabs
