@@ -4,7 +4,8 @@
   "private": true,
   "devDependencies": {
     "gh-pages": "^0.12.0",
-    "react-scripts": "0.8.5"
+    "react-scripts": "0.8.5",
+    "redux-logger": "^2.8.1"
   },
   "dependencies": {
     "hedron": "^0.6.0",
@@ -14,6 +15,7 @@
     "react-redux": "^5.0.2",
     "react-tabs": "^0.8.2",
     "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
     "shortid": "^2.2.6",
     "styled-components": "^1.4.3"
   },
