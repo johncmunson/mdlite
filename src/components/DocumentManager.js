@@ -7,7 +7,7 @@ import { Page, Row, Column } from 'hedron'
 const DocumentManager = (props) => (
     <Page debug>
         <Row>
-            <Column sm={12} md={12} lg={12}>
+            <Column>
                 <DocumentTabs {...props} />
             </Column>
         </Row>
